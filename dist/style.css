@@ -1,12 +1,14 @@
+*/
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
 }
 
 .container {
-  width: 400px;
-  margin: 50px auto;
-  padding: 30px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px;
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -15,18 +17,18 @@ body {
 
 h4 {
   color: #25D366;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
 p {
   font-size: 14px;
   color: #666;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 form {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 label {
@@ -38,17 +40,17 @@ label {
 
 input[type="text"], input[type="teks"] {
   width: 100%;
-  height: 40px;
+  height: 35px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 5px;
 }
 
 button {
   width: 100%;
-  height: 40px;
+  height: 35px;
   background-color: #25D366;
   color: #fff;
   border: none;
@@ -62,7 +64,7 @@ button:hover {
 
 span {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* Efek loading */
@@ -71,7 +73,7 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 18px;
   color: #333;
   display: none;
 }
@@ -82,7 +84,21 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 18px;
   color: #25D366;
   display: none;
+}
+
+/* Media Query untuk layar kecil */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 85%;
+    padding: 10px;
+  }
+  input[type="text"], input[type="teks"] {
+    height: 30px;
+  }
+  button {
+    height: 30px;
+  }
 }
