@@ -7,15 +7,6 @@
     font-size: 17px;
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #9847;
-}
-
 /* Container styling */
 .container {
     width: 100%;
@@ -24,12 +15,6 @@ body {
     border: 1px solid #efefef;
     border-radius: 10px;
     background-color: #ffffff;
-}
-
-/* Heading styling */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
-    color: #000;
 }
 
 h4 {
