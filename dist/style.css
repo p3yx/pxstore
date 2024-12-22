@@ -1,27 +1,28 @@
-/* General reset and base styles */
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #f0f0f0;
 }
 
 .container {
-  width: 80%;
-  margin: 40px auto;
-  padding: 20px;
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 h4 {
   color: #25D366;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
   font-size: 14px;
   color: #666;
+  margin-bottom: 30px;
 }
 
 form {
@@ -31,6 +32,8 @@ form {
 label {
   font-size: 14px;
   color: #333;
+  display: block;
+  margin-bottom: 10px;
 }
 
 input[type="text"], input[type="teks"] {
@@ -40,6 +43,7 @@ input[type="text"], input[type="teks"] {
   font-size: 16px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 button {
@@ -59,4 +63,26 @@ button:hover {
 span {
   display: block;
   margin-bottom: 20px;
+}
+
+/* Efek loading */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #333;
+  display: none;
+}
+
+/* Efek sukses */
+.sukses {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #25D366;
+  display: none;
 }
