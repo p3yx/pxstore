@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WhatsForm | PeyXD</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<link id="favicon" rel="shortcut icon" href="assets/favicon.png" type="image/png" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container text-center">
+		<div class="form-box">
+			<h2>PEYX STORE</h2>
+			<p>Silahkan isi form orderan</p>
+			<p>No admin 6283151636921</p>
+			<form id="waform" action="#">
+				<div class="form-group">
+					<input id="phone" type="number" class="form-input" placeholder="Masukan no admin" required>
+				</div>
+				<div class="form-group">
+					<textarea id="message" rows="10" class="form-input" placeholder="Masukan pesanan Anda" required></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="button">ORDER</button>
+				</div>
+			</form>
+		</div>
+		<br>
+		<br>
+		&copy; Copyright 2024 Peyx. All rights reserved <a href="https://pxstore.biz.id/" target="_blank"></a>.</p>
+	</div>
+	<div class="wa-bg"></div>
+	
+
+	</a>
+
+	<script type="text/javascript">
+		var WaForm = {
+			init: function() {
+				this.getForm().addEventListener('submit', this.submit);
+			},
+			getForm: function() {
+				return document.getElementById('waform');
+			},
+			submit: function( event ) {
+				event.preventDefault();
+				var msg = WaForm.getMsg( document.getElementById('message').value ),
+					phone = document.getElementById('phone').value;
+
+				if (WaForm.isMobile()) {
+					window.open('whatsapp://send?phone=' + phone + '&text=' + msg, '_blank');
+				} else {
+					window.open('https://api.whatsapp.com/send?phone=' + phone + '&text=' + msg, '_blank');
+				}
+			},
+			getMsg: function( text ) {
+				return encodeURIComponent(text);
+			},
+			isMobile: function() {
+				return navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i);
+			}
+		};
+		WaForm.init(); // init app
+	</script>
+</body>
+</html>
